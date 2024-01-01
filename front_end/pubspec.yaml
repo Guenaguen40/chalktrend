@@ -12,7 +12,14 @@ dependencies:
 
   cupertino_icons: ^1.0.2    # a collection of iOS-style icons
   rive: ^0.9.1                # a platform for designing, animating, and integrating vector animations
-  flutter_svg: ^1.1.6     # for rendering Scalable Vector Graphics (SVG) images
+  flutter_svg: ^1.1.6     # for rendering SVG images
+  responsive_builder: ^0.4.1  #this to build ropensive design for different layouts and devices
+  image_picker: ^1.0.4 #this for image picking from the gallery 
+  file_picker: ^4.0.1 #this for file picking from the phone 
+  http: ^0.13.3 #this for http requests to the backend
+  provider: ^6.1.1 #this for state mangment 
+
+
 
 dev_dependencies:
   flutter_test:

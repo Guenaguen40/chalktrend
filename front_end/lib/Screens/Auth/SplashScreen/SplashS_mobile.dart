@@ -1,18 +1,20 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:front_end/Screens/Auth/Role/Role.dart';
+import 'package:front_end/Screens/Auth/LoginScreen/LoginScreen.dart';
 import 'package:rive/rive.dart';
 import 'package:front_end/Components/animated_btn.dart';
-import 'package:front_end/Screens/Onbording/SignUpS.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class SplashsMobile extends StatefulWidget {
+  const SplashsMobile({Key? key}) : super(key: key);
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<SplashsMobile> createState() => _SplashsMobileState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _SplashsMobileState extends State<SplashsMobile> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late RiveAnimationController _btnAnimationController;
 
   @override
@@ -23,11 +25,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void navigateToSignUpScreen2() {
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => SignUpScreen2(btnAnimationController: _btnAnimationController,),
+      builder: (context) => Role(),
     ));
   }
 
-  @override
+  void navigateToLoginScreen() {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => LoginScreen(),
+    ));
+  }
+
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -77,31 +85,65 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             "Discover and connect with freelance tutors for personalized learning. Learn from experts in various subjects and skills.")
                       ]),
                     ),
-                    const Spacer(
-                      flex: 2,
-                    ),
+                    Spacer(
+                             flex: 2,
+                     ),
                     AnimatedBtn(
-                      btnAnimationController: _btnAnimationController,
-                      press: () {
-                        _btnAnimationController.isActive = true;
-                        navigateToSignUpScreen2(); // Navigate to SignUpScreen2 when the button is pressed
+                    btnAnimationController: _btnAnimationController,
+                press: () {
+               _btnAnimationController.isActive = true;
+                     navigateToSignUpScreen2();
                       },
-                      key: null,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 24.0),
-                      child: Text(
-                        "Access a wide range of tutoring services, premium lessons, videos, source materials, and certification.",
-                        style: TextStyle(),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
+                         ),
+Row(
+mainAxisSize: MainAxisSize.max,
+mainAxisAlignment: MainAxisAlignment.start,
+children: [
+Padding(
+padding: EdgeInsetsDirectional.fromSTEB(16, 25, 16, 32),
+child: Row(
+mainAxisSize: MainAxisSize.max,
+mainAxisAlignment: MainAxisAlignment.center,
+children: [
+Text('Already have an account?'),
+Padding(
+padding: EdgeInsetsDirectional.fromSTEB(4, 0, 0, 0),
+child: InkWell(
+onTap: () async {
+await Navigator.push(
+context,
+MaterialPageRoute(
+builder: (context) => LoginScreen(),
+),
+);
+},
+child: Text(
+'Login',
+style: TextStyle(
+color: Colors.blueGrey,
+),
+),
+),
+),
+],
+),
+),
+],
+),
+Padding(
+padding: const EdgeInsets.symmetric(vertical: 24.0),
+child: Text(
+"Access a wide range of tutoring services, premium lessons, videos, source materials, and certification.",
+style: TextStyle(),
+),
+),
+],
+),
+),
+),
+),
+],
+),
+);
+}
 }
