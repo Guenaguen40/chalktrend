@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">EducTranspo</string>
+    <!-- auth strings -->
+    <!-- login strings -->
+    <string name="login_title">Welcome back!</string>
+    <string name="login_heading">Log in to your account</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_button">Log in</string>
+    <string name="login_error_invalid_credentials">Invalid email or password. Please try again.</string>
+    <string name="login_error_network">There was a problem connecting to the server. Please check your internet connection and try again.</string>
+    <!-- signup strings -->
+    <string name="signup_title">Create a new account</string>
+    <string name="signup_heading">Join us today!</string>
+    <string name="signup_full_name_label">Full Name</string>
+    <string name="signup_email_label">Email</string>
+    <string name="signup_password_label">Password</string>
+    <string name="signup_confirm_password_label">Confirm Password</string>
+    <string name="signup_button">Sign up</string>
+    <string name="signup_already_have_account">Already have an account? Log in</string>
+    <string name="signup_error_empty_fields">Please fill in all fields.</string>
+    <string name="signup_error_email_in_use">This email is already in use.</string>
+    <string name="signup_terms_of_service">By signing up, you agree to our Terms of Service.</string>
+    <string name="Privacy_Policy">Read our Privacy Policy</string>
+    <!-- error strings -->
+    <string name="loading">Loading…</string>
+    <string name="success_signup">Your account has been created successfully!</string>
+    <string name="generic_error">Something went wrong. Please try again later.</string>
+    <string name="Phone_Number_Hint">eg.+21655888990</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
+    <string name="login_via">Login via</string>
+    <string name="verify_code_screen_message" />
+    <string name="register_via">Register Via</string>
+    <string name="verify_code_screen_enter_code">Please enter the code you recived to verify your account</string>
+    <string name="verify_code_screen_get_a_new_code">Didn\'t recive your code yet? click here to get a new one.</string>
+    <string name="verify_code_screen_next">Verify</string>
+    <string name="reset_password_sign_in_with_another_email_or_phone">reset password or you can sign in with different email</string>
+
+</resources>
